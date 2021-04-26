@@ -1,0 +1,17 @@
+.img__sticky {
+    img {
+        width: calc(100% + ((100vw - 100%) / 2));
+
+        @media screen and(min-width: 996px) {
+            width: calc(100% + ((100vw - 200%) / 2));
+        }
+    }
+
+    &--right {
+        img.desktop {
+            width: calc(100% + ((100vw - 200%) / 2));
+            position: relative;
+            right: calc((200% - 100vw) / 2);
+        }
+    }
+}

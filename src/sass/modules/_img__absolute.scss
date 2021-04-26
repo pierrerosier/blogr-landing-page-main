@@ -1,0 +1,32 @@
+.img__absolute {
+    position: absolute;
+    top: -20%;
+    width: 100%;
+
+    @media screen and(min-width: 600px) {
+        top: -50%;
+        left: 0;
+    
+    }
+
+    @media screen and(min-width: 768px) {
+        top: -80%;
+    }
+
+    @media screen and(min-width: 834px) {
+        top: -90%;
+    }
+
+    @media screen and(min-width: 992px) {
+        top: -13%;
+    }
+    
+
+    img {
+        width: calc(100% + ((100vw - 100%) / 2));
+
+        @media screen and(min-width: 996px) {
+            width: calc(100% + ((100vw - 200%) / 2));
+        }
+    }
+}

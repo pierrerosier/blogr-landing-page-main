@@ -1,0 +1,16 @@
+/* Theme Name: AlexKergall
+ * Author: Pierre Rosier
+ * Description: Thème créé pour un exercice Frontend Mentor
+ * Version: 1.0.0
+ */
+
+ @import 'variables';
+
+ @import 'base/base';
+ @import 'base/fonts';
+
+ @import 'modules/containers';
+ @import 'modules/background';
+ @import 'modules/buttons';
+ @import 'modules/img__sticky';
+ @import 'modules/img__absolute';
