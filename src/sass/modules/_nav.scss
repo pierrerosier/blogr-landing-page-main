@@ -1,0 +1,100 @@
+.navbar {
+    padding: 3rem 0 8rem;
+}
+
+.navbar-toggler {
+    .burger-closed {
+        display: none;
+    }
+}
+
+.is-active {
+    .burger-opened {
+        display: none;
+    }
+    .burger-closed {
+        display: inline-block;
+    }
+}
+
+.navbar-collapse {
+    padding: 2rem;
+    background-color: $White;
+
+    @media screen and(min-width: 992px) {
+        padding: 0;
+        position: relative;
+        left: calc(100%*(2/12));
+        background-color: transparent;
+    }
+
+    .navbar-nav {
+        text-align: center;
+
+        @media screen and(min-width: 992px) {
+            text-align: left;
+        }
+
+        .dropdown-toggle::after {
+            color: $Carnation;
+
+            @media screen and(min-width: 992px) {
+                color: $White;
+            }            
+        }
+
+        .dropdown-menu {
+            background-color: $French-Gray;
+            text-align: center;
+
+            @media screen and(min-width: 992px) {
+                background-color: $White;
+                text-align: left;
+            }
+        }
+
+        .is-login {
+            @media screen and(min-width: 992px) {
+                padding-left: 25vw;
+            }
+        }
+    }
+
+    .nav-item>a {   
+        font-family: $ubunturegular;
+        font-size: .75rem;
+        color: $Shark;
+        text-decoration: none;
+
+            @media screen and(min-width: 992px) {  
+                color: $White;
+            }
+    }
+
+    .dropdown-item {
+        font-family: $ubunturegular;
+        font-size: .75rem;
+        color: $Shark;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    .btn {
+        padding: 1rem 2.5rem;
+        background: linear-gradient(117deg, $Salmon 0%, $Radical-Red 100%);
+        border-radius: 50px;
+        border: none;
+        font-family: $ubunturegular;
+        font-size: .75rem;
+        color: $White;
+        transition: none;
+
+        @media screen and(min-width: 992 px) {
+            margin: 0;
+            background: $White;
+            color: $Carnation;
+        }
+    }
+}

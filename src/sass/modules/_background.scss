@@ -1,4 +1,4 @@
-.bg-intro {
+.bg-header {
     background: url('/src/images/bg-pattern-intro.svg') no-repeat center,
                 linear-gradient(117deg, $Salmon 0%, $Radical-Red 100%);
     background-size: cover;
@@ -15,9 +15,33 @@
     border-bottom-left-radius: 120px;
     border-top-right-radius: 120px;
     padding: 7.5rem 0 8.75rem;
-    margin-top: 13.375rem;
+    margin-top: 13.125rem;
 
     @media screen and(min-width: 600px) {
         margin-top: 36.375rem;
+    }
+
+    @media screen and(min-width: 992px) {
+        margin-top: 7.75rem;
+    }
+}
+
+.bg-sticky__left {
+    margin-top: 13.125rem;
+
+    @media screen and(min-width: 992px) {
+        margin-top: 7.75rem;
+    }
+}
+
+.bg-footer {
+    padding: 9.5rem 0;
+    background-color: $Shark;
+    border-top-right-radius: 120px;
+    margin-top: 13.125rem;
+
+    @media screen and(min-width: 992px) {
+        margin-top: 7.75rem;
+        padding: 4.5rem 0;
     }
 }

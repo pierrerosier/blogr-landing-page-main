@@ -73,7 +73,14 @@ p {
   color: #1F3F5B;
 }
 
-p.header {
+p.is-site-footer {
+  margin-top: 0;
+  font-family: "ubuntubold";
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+
+p.is-header {
   font-size: 1.6875rem;
 }
 
@@ -81,15 +88,20 @@ p.is-white {
   color: #FFFFFF;
 }
 
-/*
-*Footer
-*/
+a.is-title-header,
+a.is-title-footer {
+  font-family: "ubuntubold";
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 
-a {
+a.__link {
   color: #3e52a3;
 }
 
@@ -101,8 +113,8 @@ a {
 */
 @font-face {
   font-family: 'overpasslight';
-  src: url("overpass-light-webfont.woff2") format("woff2"), url("overpass-light-webfont.woff") format("woff");
-  font-weight: normal;
+  src: url("/src/fonts/overpass-light-webfont.woff2") format("woff2"), url("/src/fonts/overpass-light-webfont.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -111,8 +123,8 @@ a {
 */
 @font-face {
   font-family: 'overpasssemibold';
-  src: url("overpass-semibold-webfont.woff2") format("woff2"), url("overpass-semibold-webfont.woff") format("woff");
-  font-weight: normal;
+  src: url("/src/fonts/overpass-semibold-webfont.woff2") format("woff2"), url("/src/fonts/overpass-semibold-webfont.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -124,9 +136,9 @@ a {
 */
 @font-face {
   font-family: 'ubunturegular';
-  src: url("ubuntu-r-webfont.eot");
-  src: url("ubuntu-r-webfont.eot?#iefix") format("embedded-opentype"), url("ubuntu-r-webfont.woff2") format("woff2"), url("ubuntu-r-webfont.woff") format("woff"), url("ubuntu-r-webfont.svg#ubunturegular") format("svg");
-  font-weight: normal;
+  src: url("/src/fonts/ubuntu-r-webfont.eot");
+  src: url("/src/fonts/ubuntu-r-webfont.eot?#iefix") format("embedded-opentype"), url("/src/fonts/ubuntu-r-webfont.woff2") format("woff2"), url("/src/fonts/ubuntu-r-webfont.woff") format("woff"), url("/src/fonts/ubuntu-r-webfont.svg#ubunturegular") format("svg");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -135,9 +147,9 @@ a {
 */
 @font-face {
   font-family: 'ubuntumedium';
-  src: url("ubuntu-m-webfont.eot");
-  src: url("ubuntu-m-webfont.eot?#iefix") format("embedded-opentype"), url("ubuntu-m-webfont.woff2") format("woff2"), url("ubuntu-m-webfont.woff") format("woff"), url("ubuntu-m-webfont.svg#ubuntumedium") format("svg");
-  font-weight: normal;
+  src: url("/src/fonts/ubuntu-m-webfont.eot");
+  src: url("/src/fonts/ubuntu-m-webfont.eot?#iefix") format("embedded-opentype"), url("/src/fonts/ubuntu-m-webfont.woff2") format("woff2"), url("/src/fonts/ubuntu-m-webfont.woff") format("woff"), url("/src/fonts/ubuntu-m-webfont.svg#ubuntumedium") format("svg");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -146,10 +158,121 @@ a {
 */
 @font-face {
   font-family: 'ubuntubold';
-  src: url("ubuntu-b-webfont.eot");
-  src: url("ubuntu-b-webfont.eot?#iefix") format("embedded-opentype"), url("ubuntu-b-webfont.woff2") format("woff2"), url("ubuntu-b-webfont.woff") format("woff"), url("ubuntu-b-webfont.svg#ubuntubold") format("svg");
-  font-weight: normal;
+  src: url("/src/fonts/ubuntu-b-webfont.eot");
+  src: url("/src/fonts/ubuntu-b-webfont.eot?#iefix") format("embedded-opentype"), url("/src/fonts/ubuntu-b-webfont.woff2") format("woff2"), url("/src/fonts/ubuntu-b-webfont.woff") format("woff"), url("/src/fonts/ubuntu-b-webfont.svg#ubuntubold") format("svg");
+  font-weight: 700;
   font-style: normal;
+}
+
+.navbar {
+  padding: 3rem 0 8rem;
+}
+
+.navbar-toggler .burger-closed {
+  display: none;
+}
+
+.is-active .burger-opened {
+  display: none;
+}
+
+.is-active .burger-closed {
+  display: inline-block;
+}
+
+.navbar-collapse {
+  padding: 2rem;
+  background-color: #FFFFFF;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-collapse {
+    padding: 0;
+    position: relative;
+    left: calc(100%*(2/12));
+    background-color: transparent;
+  }
+}
+
+.navbar-collapse .navbar-nav {
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-collapse .navbar-nav {
+    text-align: left;
+  }
+}
+
+.navbar-collapse .navbar-nav .dropdown-toggle::after {
+  color: #FF525D;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-collapse .navbar-nav .dropdown-toggle::after {
+    color: #FFFFFF;
+  }
+}
+
+.navbar-collapse .navbar-nav .dropdown-menu {
+  background-color: #C8C8CB;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-collapse .navbar-nav .dropdown-menu {
+    background-color: #FFFFFF;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-collapse .navbar-nav .is-login {
+    padding-left: 25vw;
+  }
+}
+
+.navbar-collapse .nav-item > a {
+  font-family: "ubunturegular";
+  font-size: .75rem;
+  color: #25252D;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-collapse .nav-item > a {
+    color: #FFFFFF;
+  }
+}
+
+.navbar-collapse .dropdown-item {
+  font-family: "ubunturegular";
+  font-size: .75rem;
+  color: #25252D;
+}
+
+.navbar-collapse .dropdown-item:hover {
+  background-color: transparent;
+}
+
+.navbar-collapse .btn {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(117deg, #FF8F70 0%, #FF3D54 100%);
+  border-radius: 50px;
+  border: none;
+  font-family: "ubunturegular";
+  font-size: .75rem;
+  color: #FFFFFF;
+  -webkit-transition: none;
+  transition: none;
+}
+
+@media screen and (min-width: 992 px) {
+  .navbar-collapse .btn {
+    margin: 0;
+    background: #FFFFFF;
+    color: #FF525D;
+  }
 }
 
 .intro__row-button {
@@ -162,7 +285,7 @@ a {
           flex-direction: row;
 }
 
-.bg-intro {
+.bg-header {
   background: url("/src/images/bg-pattern-intro.svg") no-repeat center, linear-gradient(117deg, #FF8F70 0%, #FF3D54 100%);
   background-size: cover;
   border-bottom-left-radius: 120px;
@@ -177,12 +300,42 @@ a {
   border-bottom-left-radius: 120px;
   border-top-right-radius: 120px;
   padding: 7.5rem 0 8.75rem;
-  margin-top: 13.375rem;
+  margin-top: 13.125rem;
 }
 
 @media screen and (min-width: 600px) {
   .bg-infrastrucuture {
     margin-top: 36.375rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .bg-infrastrucuture {
+    margin-top: 7.75rem;
+  }
+}
+
+.bg-sticky__left {
+  margin-top: 13.125rem;
+}
+
+@media screen and (min-width: 992px) {
+  .bg-sticky__left {
+    margin-top: 7.75rem;
+  }
+}
+
+.bg-footer {
+  padding: 9.5rem 0;
+  background-color: #25252D;
+  border-top-right-radius: 120px;
+  margin-top: 13.125rem;
+}
+
+@media screen and (min-width: 992px) {
+  .bg-footer {
+    margin-top: 7.75rem;
+    padding: 4.5rem 0;
   }
 }
 
@@ -213,20 +366,34 @@ a {
   }
 }
 
-.img__sticky img {
-  width: calc(100% + ((100vw - 100%) / 2));
+.img__sticky {
+  margin: 0 auto;
 }
 
-@media screen and (min-width: 996px) {
+@media screen and (min-width: 992px) {
+  .img__sticky {
+    margin: auto 0;
+  }
+}
+
+.img__sticky img {
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
   .img__sticky img {
     width: calc(100% + ((100vw - 200%) / 2));
   }
 }
 
-.img__sticky--right img.desktop {
-  width: calc(100% + ((100vw - 200%) / 2));
+.img__sticky--right img:nth-child(2) {
   position: relative;
-  right: calc((200% - 100vw) / 2);
+  right: calc((170% - 100vw) / 2);
+}
+
+.img__sticky--left img:nth-child(2) {
+  position: relative;
+  left: calc((140% - 100vw) / 2);
 }
 
 .img__absolute {
@@ -264,9 +431,50 @@ a {
   width: calc(100% + ((100vw - 100%) / 2));
 }
 
-@media screen and (min-width: 996px) {
+@media screen and (min-width: 992px) {
   .img__absolute img {
     width: calc(100% + ((100vw - 200%) / 2));
   }
+}
+
+.list-group li.is-regular a {
+  font-family: "ubunturegular";
+  font-size: .75rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.list-group li.is-regular a:hover {
+  color: #C8C8CB;
+}
+
+.list-group li.is-bold {
+  margin-top: 7.5rem;
+  margin-bottom: 2.625rem;
+}
+
+.list-group li.is-bold a {
+  font-family: "ubuntubold";
+  font-size: .75rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.list-group li.is-bold a:hover {
+  color: #C8C8CB;
+}
+
+@media screen and (min-width: 992px) {
+  .list-group li.is-bold {
+    margin-top: 0;
+  }
+}
+
+.list-group li:not(:first-child) {
+  margin-bottom: 1.375rem;
+}
+
+.list-group li:last-child a {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=app.css.map */

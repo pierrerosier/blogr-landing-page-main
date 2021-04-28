@@ -7,6 +7,7 @@ body {
     font-size: 16px;
 }
 
+
 h1 {
     font-family: $overpasssemibold;
     font-size: 3.125rem;
@@ -39,7 +40,14 @@ p {
     font-size: 1.375rem;
     color: $Cello; 
 
-    &.header {
+    &.is-site-footer {
+        margin-top: 0;
+        font-family: $ubuntubold;
+        font-size: 2rem;
+        color: $White;
+    }
+
+    &.is-header {
         font-size: 1.6875rem;
     }
 
@@ -48,12 +56,17 @@ p {
     }
 }
 
-/*
-*Footer
-*/
+a.is-title-header,
+a.is-title-footer {
+    font-family: $ubuntubold;
+    color: $White;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
 .attribution { 
     font-size: 11px;
     text-align: center; }
-    a { 
+    a.__link { 
         color: hsl(228, 45%, 44%);
     }

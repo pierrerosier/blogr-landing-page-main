@@ -1,17 +1,29 @@
 .img__sticky {
-    img {
-        width: calc(100% + ((100vw - 100%) / 2));
+    margin: 0 auto;
 
-        @media screen and(min-width: 996px) {
+    @media screen and(min-width: 992px) {
+        margin: auto 0;
+    }
+    
+    img {
+        width: 100%;
+
+        @media screen and(min-width: 992px) {
             width: calc(100% + ((100vw - 200%) / 2));
         }
     }
 
     &--right {
-        img.desktop {
-            width: calc(100% + ((100vw - 200%) / 2));
+        img:nth-child(2){
             position: relative;
-            right: calc((200% - 100vw) / 2);
+            right: calc((170% - 100vw) / 2);
+        }
+    }
+
+    &--left {
+        img:nth-child(2) {
+            position: relative;
+            left: calc((140% - 100vw) / 2);
         }
     }
 }
