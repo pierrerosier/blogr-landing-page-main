@@ -204,9 +204,10 @@ a.__link {
   }
 }
 
-.navbar-collapse .navbar-nav .dropdown-toggle:hover {
-  text-decoration: underline;
-  color: #FFFFFF;
+@media screen and (min-width: 992px) {
+  .navbar-collapse .navbar-nav .dropdown-toggle:hover {
+    text-decoration: underline;
+  }
 }
 
 .navbar-collapse .navbar-nav .dropdown-toggle::after {
@@ -377,11 +378,13 @@ a.__link {
 
 .button__salmon {
   background-color: #FFFFFF;
+  border: #FFFFFF solid 2px;
   color: #FF8F70;
 }
 
 .button__salmon:hover {
   background-color: #FF8F70;
+  border: #FF8F70 solid 2px;
   color: #FFFFFF;
 }
 
@@ -394,7 +397,6 @@ a.__link {
 .button__white:hover {
   background-color: #FFFFFF;
   color: #FF8F70;
-  border: none;
 }
 
 .img__sticky {

@@ -1,6 +1,4 @@
 .button {
-    //background-color: $White;
-    //border: solid 2px $White;
     border: none;
     border-radius: 50px;
     font-family: 'overpasssemibold';
@@ -8,10 +6,12 @@
 
     &__salmon {
         background-color: $White;
+        border: $White solid 2px;
         color: $Salmon;
 
         &:hover {
             background-color: $Salmon;
+            border: $Salmon solid 2px;
             color: $White;
         }
     }
@@ -24,7 +24,6 @@
         &:hover {
             background-color: $White;
             color: $Salmon;
-            border: none
         }
     }
 

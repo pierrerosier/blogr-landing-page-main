@@ -38,8 +38,10 @@
         .dropdown-toggle {
 
             &:hover {
-                text-decoration: underline;
-                color: $White;
+
+               @media screen and(min-width: 992px) {
+                    text-decoration: underline;
+                }
             }
 
             &::after {
