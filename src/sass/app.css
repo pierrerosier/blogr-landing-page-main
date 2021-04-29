@@ -219,6 +219,8 @@ a.__link {
   border-right: .3em solid transparent;
   border-bottom: .3em solid;
   border-left: .3em solid transparent;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .navbar-collapse .navbar-nav .dropdown-menu {
@@ -261,6 +263,7 @@ a.__link {
 
 .navbar-collapse .dropdown-item:hover {
   background-color: transparent;
+  font-family: "ubuntubold";
 }
 
 .navbar-collapse .btn {

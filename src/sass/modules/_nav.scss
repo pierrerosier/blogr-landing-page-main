@@ -48,6 +48,7 @@
             border-right: .3em solid transparent;
             border-bottom: .3em solid;
             border-left: .3em solid transparent;
+            text-decoration-line: underline;
         }
 
         .dropdown-menu {
@@ -86,6 +87,7 @@
 
         &:hover {
             background-color: transparent;
+            font-family: $ubuntubold;
         }
     }
 
