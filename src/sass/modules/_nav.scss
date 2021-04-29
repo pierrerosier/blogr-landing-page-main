@@ -35,12 +35,21 @@
             text-align: left;
         }
 
-        .dropdown-toggle::after {
-            color: $Carnation;
+        .dropdown-toggle {
 
-            @media screen and(min-width: 992px) {
+            &:hover {
+                text-decoration: underline;
                 color: $White;
-            }            
+            }
+
+            &::after {
+                color: $Carnation;
+    
+                @media screen and(min-width: 992px) {
+                    color: $White;
+                }            
+            }
+
         }
 
         .active::after {
@@ -100,6 +109,11 @@
         font-size: .75rem;
         color: $White;
         transition: none;
+
+        &:hover {
+            background-color: $Salmon;
+            color: $White;
+        }
 
         @media screen and(min-width: 992px) {
             margin: 0;

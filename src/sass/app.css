@@ -204,6 +204,11 @@ a.__link {
   }
 }
 
+.navbar-collapse .navbar-nav .dropdown-toggle:hover {
+  text-decoration: underline;
+  color: #FFFFFF;
+}
+
 .navbar-collapse .navbar-nav .dropdown-toggle::after {
   color: #FF525D;
 }
@@ -276,6 +281,11 @@ a.__link {
   color: #FFFFFF;
   -webkit-transition: none;
   transition: none;
+}
+
+.navbar-collapse .btn:hover {
+  background-color: #FF8F70;
+  color: #FFFFFF;
 }
 
 @media screen and (min-width: 992px) {
