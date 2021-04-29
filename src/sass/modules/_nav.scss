@@ -43,6 +43,13 @@
             }            
         }
 
+        .active::after {
+            border-top: 0;
+            border-right: .3em solid transparent;
+            border-bottom: .3em solid;
+            border-left: .3em solid transparent;
+        }
+
         .dropdown-menu {
             background-color: $French-Gray;
             text-align: center;
@@ -56,6 +63,7 @@
         .is-login {
             @media screen and(min-width: 992px) {
                 padding-left: 25vw;
+                padding-right: 1.5rem;
             }
         }
     }
@@ -91,7 +99,7 @@
         color: $White;
         transition: none;
 
-        @media screen and(min-width: 992 px) {
+        @media screen and(min-width: 992px) {
             margin: 0;
             background: $White;
             color: $Carnation;

@@ -8,10 +8,10 @@
 }
 
 .bg-infrastrucuture {
-    background: url('/src/images/bg-pattern-circles.svg') no-repeat,
+    background: left top / contain no-repeat url('/src/images/bg-pattern-circles.svg'),
                 linear-gradient(117deg, $Charade 0%, $Fiord 100%);
-    background-size: contain;
-    background-position: left 0% bottom 0%;
+    /*background-size: cover;
+    background-position: 40% 10%;*/
     border-bottom-left-radius: 120px;
     border-top-right-radius: 120px;
     padding: 7.5rem 0 8.75rem;

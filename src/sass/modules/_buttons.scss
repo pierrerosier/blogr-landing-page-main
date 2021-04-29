@@ -1,17 +1,35 @@
 .button {
-    background-color: $White;
-    border: solid 2px $White;
+    //background-color: $White;
+    //border: solid 2px $White;
+    border: none;
     border-radius: 50px;
     font-family: 'overpasssemibold';
-    color: $Carnation;
+    //color: $Carnation;
 
-    &:hover {
+    &__salmon {
+        background-color: $White;
+        color: $Salmon;
+
+        &:hover {
+            background-color: $Salmon;
+            color: $White;
+        }
+    }
+
+    &__white {
         background-color: transparent;
+        border: $White solid 2px;
         color: $White;
+
+        &:hover {
+            background-color: $White;
+            color: $Salmon;
+            border: none
+        }
     }
 
 
-    @media screen and(max-width: 768px) {
+    /*@media screen and(max-width: 768px) {
         margin-top: 3.5rem;
         font-size: 1.375rem;
     }
@@ -19,5 +37,5 @@
     @media screen and(max-width: 576px) {
         margin-top: 6.5rem;
         font-size: 1rem;
-    }
+    }*/
 }

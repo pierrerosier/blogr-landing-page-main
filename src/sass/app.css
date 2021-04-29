@@ -214,6 +214,13 @@ a.__link {
   }
 }
 
+.navbar-collapse .navbar-nav .active::after {
+  border-top: 0;
+  border-right: .3em solid transparent;
+  border-bottom: .3em solid;
+  border-left: .3em solid transparent;
+}
+
 .navbar-collapse .navbar-nav .dropdown-menu {
   background-color: #C8C8CB;
   text-align: center;
@@ -229,6 +236,7 @@ a.__link {
 @media screen and (min-width: 992px) {
   .navbar-collapse .navbar-nav .is-login {
     padding-left: 25vw;
+    padding-right: 1.5rem;
   }
 }
 
@@ -267,7 +275,7 @@ a.__link {
   transition: none;
 }
 
-@media screen and (min-width: 992 px) {
+@media screen and (min-width: 992px) {
   .navbar-collapse .btn {
     margin: 0;
     background: #FFFFFF;
@@ -294,9 +302,9 @@ a.__link {
 }
 
 .bg-infrastrucuture {
-  background: url("/src/images/bg-pattern-circles.svg") no-repeat, linear-gradient(117deg, #2C2D3F 0%, #3F4164 100%);
-  background-size: contain;
-  background-position: left 0% bottom 0%;
+  background: left top/contain no-repeat url("/src/images/bg-pattern-circles.svg"), linear-gradient(117deg, #2C2D3F 0%, #3F4164 100%);
+  /*background-size: cover;
+    background-position: 40% 10%;*/
   border-bottom-left-radius: 120px;
   border-top-right-radius: 120px;
   padding: 7.5rem 0 8.75rem;
@@ -340,30 +348,40 @@ a.__link {
 }
 
 .button {
-  background-color: #FFFFFF;
-  border: solid 2px #FFFFFF;
+  border: none;
   border-radius: 50px;
   font-family: 'overpasssemibold';
-  color: #FF525D;
+  /*@media screen and(max-width: 768px) {
+        margin-top: 3.5rem;
+        font-size: 1.375rem;
+    }
+
+    @media screen and(max-width: 576px) {
+        margin-top: 6.5rem;
+        font-size: 1rem;
+    }*/
 }
 
-.button:hover {
-  background-color: transparent;
+.button__salmon {
+  background-color: #FFFFFF;
+  color: #FF8F70;
+}
+
+.button__salmon:hover {
+  background-color: #FF8F70;
   color: #FFFFFF;
 }
 
-@media screen and (max-width: 768px) {
-  .button {
-    margin-top: 3.5rem;
-    font-size: 1.375rem;
-  }
+.button__white {
+  background-color: transparent;
+  border: #FFFFFF solid 2px;
+  color: #FFFFFF;
 }
 
-@media screen and (max-width: 576px) {
-  .button {
-    margin-top: 6.5rem;
-    font-size: 1rem;
-  }
+.button__white:hover {
+  background-color: #FFFFFF;
+  color: #FF8F70;
+  border: none;
 }
 
 .img__sticky {
@@ -384,6 +402,10 @@ a.__link {
   .img__sticky img {
     width: calc(100% + ((100vw - 200%) / 2));
   }
+}
+
+.img__sticky--right {
+  margin-top: 6rem;
 }
 
 .img__sticky--right img:nth-child(2) {
