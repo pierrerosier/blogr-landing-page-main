@@ -1,5 +1,5 @@
 .bg-header {
-    background: url('/src/images/bg-pattern-intro.svg') no-repeat center,
+    background: url('src/images/bg-pattern-intro.svg') no-repeat center,
                 linear-gradient(117deg, $Salmon 0%, $Radical-Red 100%);
     background-size: cover;
     border-bottom-left-radius: 120px;
@@ -8,7 +8,7 @@
 }
 
 .bg-infrastrucuture {
-    background: left top / contain no-repeat url('/src/images/bg-pattern-circles.svg'),
+    background: left top / contain no-repeat url('src/images/bg-pattern-circles.svg'),
                 linear-gradient(117deg, $Charade 0%, $Fiord 100%);
     /*background-size: cover;
     background-position: 40% 10%;*/
